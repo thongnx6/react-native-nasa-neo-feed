@@ -1,8 +1,14 @@
 Minso nasa neo feeds
 ===
 
+[![pipeline status](https://gitlab.com/thongnx/minso-nasa-neo-feed/badges/master/pipeline.svg)](https://gitlab.com/thongnx/minso-nasa-neo-feed/commits/master)
+[![coverage](https://gitlab.com/thongnx/minso-nasa-neo-feed/badges/master/coverage.svg)](https://gitlab.com/thongnx/minso-nasa-neo-feed/commits/master)
 This is a simple project using NASA NEO - Feed​ to display a list of Asteroid object and might also allow the user to favourite them.
 Build with [react-native](http://facebook.github.io/react-native/)
+
+### Demo
+
+![Minso nasa neo feeds](/__example/demo.mov)
 
 ### Mobile Application
 
