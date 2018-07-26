@@ -1,4 +1,4 @@
-image: webcuisine/gitlab-ci-react-native-android
+image: node:latest
 
 # CI config is based on frontend-mobile#7
 # Some stage and build steps are missed due to lacking of resource (hardware, accounts), will be
@@ -59,6 +59,7 @@ unit-test:
 # --------------------------------------------------------------------------------
 
 build-android:
+  image: webcuisine/gitlab-ci-react-native-android
   stage: build
   script:
     - yarn build:android:debug

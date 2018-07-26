@@ -9,6 +9,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build:android:debug": "./script/build-android-debug.sh",
+    "dev:ios": "react-native run-ios",
+    "dev:android": "react-native run-android",
     "precommit": "lint-staged",
     "prepush": "yarn test"
   },
