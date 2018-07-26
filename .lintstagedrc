@@ -1,0 +1,5 @@
+"*.js":
+  # Reformat the code before git commitment.
+  - "yarn run prettier --write"
+  - "yarn run eslint ./ --fix"
+  - "git add"
