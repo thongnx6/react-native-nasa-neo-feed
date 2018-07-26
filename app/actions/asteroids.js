@@ -43,7 +43,7 @@ const callbacks = {
 
 export default {
   get(queryParams) {
-    return (dispatch) => {
+    return dispatch => {
       callbacks.get(dispatch);
 
       return asteroidsApi
@@ -51,5 +51,5 @@ export default {
         .then(data => callbacks.success(data, dispatch))
         .catch(data => callbacks.error(data, dispatch));
     };
-  }
+  },
 };

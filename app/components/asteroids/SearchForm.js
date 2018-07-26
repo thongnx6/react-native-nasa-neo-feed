@@ -14,19 +14,19 @@ const Style = {
     paddingRight: 8,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   datePickerItem: {
     padding: 0,
     width: 90,
-    height: 32
+    height: 32,
   },
   separateText: {
     color: '#7c7c7c',
     width: 40,
     textAlign: 'center',
-    marginTop: 8
-  }
+    marginTop: 8,
+  },
 };
 
 class SearchForm extends React.Component {
@@ -35,33 +35,34 @@ class SearchForm extends React.Component {
 
     this.state = {
       startDate: Moment().format('YYYY-MM-DD'),
-      endDate:  Moment().format('YYYY-MM-DD'),
+      endDate: Moment().format('YYYY-MM-DD'),
     };
 
     this._handleSearchStart = this._handleSearchStart.bind(this);
     this._changeStartDate = this._changeStartDate.bind(this);
-    this._changeEndDate = this._changeEndDate.bind(this);   
+    this._changeEndDate = this._changeEndDate.bind(this);
   }
 
   _handleSearchStart() {
-    this.props.dispatch(actions.get({
-      start_date: this.state.startDate,
-      end_date: this.state.endDate
-    }));
+    this.props.dispatch(
+      actions.get({
+        start_date: this.state.startDate,
+        end_date: this.state.endDate,
+      })
+    );
   }
 
   async _changeStartDate(startDate) {
-    await this.setState({startDate});
+    await this.setState({ startDate });
     this._handleSearchStart();
   }
 
   async _changeEndDate(endDate) {
-    await this.setState({endDate});
+    await this.setState({ endDate });
     this._handleSearchStart();
   }
 
   render() {
-
     return (
       <View style={Style.component}>
         <DatePicker

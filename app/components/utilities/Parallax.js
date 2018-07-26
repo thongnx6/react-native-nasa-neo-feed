@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  StyleSheet,
-  Platform,
-  Animated,
-  Text,
-  View,
-  Dimensions,
-} from 'react-native';
+import { StyleSheet, Platform, Animated, Text, View, Dimensions } from 'react-native';
 
-const {
-  height: SCREEN_HEIGHT,
-} = Dimensions.get('window');
+const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
 const IS_IPHONE_X = SCREEN_HEIGHT === 812;
 const STATUS_BAR_HEIGHT = Platform.OS === 'ios' ? (IS_IPHONE_X ? 44 : 20) : 0;
@@ -118,7 +109,11 @@ class Parallax extends Component {
   getHeaderHeight() {
     return this.state.scrollY.interpolate({
       inputRange: this.getInputRange(),
-      outputRange: [this.getHeaderMaxHeight() + this.getExtraScrollHeight(), this.getHeaderMaxHeight(), this.getHeaderMinHeight()],
+      outputRange: [
+        this.getHeaderMaxHeight() + this.getExtraScrollHeight(),
+        this.getHeaderMaxHeight(),
+        this.getHeaderMinHeight(),
+      ],
       extrapolate: 'clamp',
     });
   }
@@ -172,9 +167,7 @@ class Parallax extends Component {
         style={[
           styles.headerTitle,
           {
-            transform: [
-              { translateY: titleTranslate },
-            ],
+            transform: [{ translateY: titleTranslate }],
             height: this.getHeaderHeight(),
           },
         ]}
@@ -198,7 +191,6 @@ class Parallax extends Component {
       >
         {renderNavBar()}
       </Animated.View>
-      
     );
   }
 
@@ -290,9 +282,7 @@ class Parallax extends Component {
         scrollEventThrottle={scrollEventThrottle}
         onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: this.state.scrollY } } }])}
       >
-        <View style={{ marginTop: this.getHeaderMaxHeight() }}>
-          {renderContent()}
-        </View>
+        <View style={{ marginTop: this.getHeaderMaxHeight() }}>{renderContent()}</View>
       </Animated.ScrollView>
     );
   }

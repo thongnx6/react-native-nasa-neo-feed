@@ -19,4 +19,5 @@ if (process.env.NODE_ENV === 'development') {
   middleware.push(logger);
 }
 
-export default (state = {}) => createStore(reducers, state, compose(applyMiddleware(thunk, ...middleware)));
+export default (state = {}) =>
+  createStore(reducers, state, compose(applyMiddleware(thunk, ...middleware)));

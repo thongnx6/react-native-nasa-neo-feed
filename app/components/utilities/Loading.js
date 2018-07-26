@@ -18,9 +18,7 @@ class Loader extends React.Component {
 
     if (!this.props.loading) return null;
 
-    return (
-      <ActivityIndicator animating={this.props.loading} style={appearance} />
-    );
+    return <ActivityIndicator animating={this.props.loading} style={appearance} />;
   }
 }
 

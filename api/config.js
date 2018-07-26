@@ -1,6 +1,6 @@
 /**
  * config.js
- * 
+ *
  * Make a config information about the desc opts API RESTful
  */
 

@@ -28,7 +28,7 @@ export default (state = initialState, action = {}) => {
         loading: false,
         error: null,
         error_message: null,
-        ...action.data
+        ...action.data,
       });
 
     case constant.error:

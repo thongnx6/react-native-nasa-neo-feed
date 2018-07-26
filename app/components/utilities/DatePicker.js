@@ -11,7 +11,7 @@ import {
   Platform,
   Animated,
   Keyboard,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
 import Moment from 'moment';
 
@@ -101,7 +101,6 @@ const Style = StyleSheet.create({
     backgroundColor: '#eee',
   },
 });
-
 
 class DatePicker extends Component {
   constructor(props) {

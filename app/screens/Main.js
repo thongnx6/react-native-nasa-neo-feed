@@ -10,7 +10,8 @@ const mapStateToProps = state => ({
   asteroids: state.asteroids,
 });
 
-export default connect(mapStateToProps)(class Main extends React.Component {
+export default connect(mapStateToProps)(
+  class Main extends React.Component {
     static propTypes = {
       dispatch: PropTypes.func,
       asteroids: PropTypes.any,
@@ -23,8 +24,8 @@ export default connect(mapStateToProps)(class Main extends React.Component {
     }
 
     renderContent() {
-      const {asteroids} = this.props;
-      return <ListItem dispatch={this.props.dispatch} data={asteroids}/>;
+      const { asteroids } = this.props;
+      return <ListItem dispatch={this.props.dispatch} data={asteroids} />;
     }
 
     render() {
@@ -34,11 +35,12 @@ export default connect(mapStateToProps)(class Main extends React.Component {
           headerMaxHeight={200}
           extraScrollHeight={20}
           navbarColor={'#fafafa'}
-          titleComponent={() => <SearchForm dispatch={this.props.dispatch}/>}
+          titleComponent={() => <SearchForm dispatch={this.props.dispatch} />}
           backgroundImage={imagesBackground}
           backgroundImageScale={1.4}
           renderContent={this.renderContent}
         />
       );
     }
-});
+  }
+);

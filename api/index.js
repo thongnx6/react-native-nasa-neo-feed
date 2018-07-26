@@ -1,6 +1,6 @@
 /**
  * index.js
- * 
+ *
  * Agent API makes writing JSON requests with fetch easier
  */
 
@@ -101,8 +101,6 @@ fetchAg = (url, opts) => {
  * @param header     {Function} the callback function to handle the response
  */
 export const fetchApi = (endPoint, payload = {}, method = 'get', headers = {}) => {
-  
-
   return fetchAg(`${apiConfig.url}${endPoint}`, {
     headers: {
       // use Bearer Authorization for init accessToken if APi required that
@@ -110,8 +108,8 @@ export const fetchApi = (endPoint, payload = {}, method = 'get', headers = {}) =
       ...headers,
     },
   })
-    [method.toLowerCase()]({...payload, api_key: apiConfig.apiKey})
-    .catch(e => { handleResponseCatch(e); });
-
+    [method.toLowerCase()]({ ...payload, api_key: apiConfig.apiKey })
+    .catch(e => {
+      handleResponseCatch(e);
+    });
 };
-
