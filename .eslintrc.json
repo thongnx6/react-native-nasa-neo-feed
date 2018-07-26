@@ -1,10 +1,14 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
   "parser": "babel-eslint",
   "env": {
     "browser": true
   },
-  "plugins": ["react"],
+  "plugins": ["flowtype", "react", "prettier"],
   "rules": {
     "react/jsx-filename-extension": [
       2,
@@ -15,6 +19,7 @@
     "react/forbid-prop-types": [0],
     "react/require-default-props": [0],
     "global-require": [0],
-    "space-in-parens": ["error", "never"]
+    "space-in-parens": ["error", "never"],
+    "funtion-paren-newline": "never"
   }
 }
