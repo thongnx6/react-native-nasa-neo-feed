@@ -8,7 +8,7 @@ Build with [react-native](http://facebook.github.io/react-native/)
 
 ### Demo
 
-![Minso nasa neo feeds](/__example/demo.mov)
+![Minso nasa neo feeds](https://drive.google.com/open?id=1dGzqtmxu1e7v_nmZCQrmEhLRJvnYZtA6)
 
 ### Mobile Application
 
